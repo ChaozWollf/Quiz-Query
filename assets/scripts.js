@@ -19,36 +19,34 @@
 //end game variable when the timer reaches 0
 //object pushed to local storage with initials tied to highscore
 
-let start = document.querySelector(".timer")
-const hs = document.getElementsByClassName("HS")
-const button = document.getElementsByClassName("startEl")
+timer = document.querySelector(".timer")
+hs = document.getElementsByClassName("HS"), button = document.querySelector(".startEle")
 let preGame = " "
 let mode=preGame
 
 
-timeleft=120        
+let timeleft=120        
 
-button.addEventListener(
-    "click",
+button.addEventListener("click",
     function () { startQuiz });
 
 
-    function startQuiz() { startTimer 
+    function startQuiz() { startTimer
 return; }
 
 function startTimer() {
-    let startEl = document.querySelector(".timer")
-    timerInterval = setInterval(function () {
+const  timerInterval = setInterval(function () {
         timeLeft--;
-        startEl.textContent = timeLeft;
+        timer.textContent = "Timer; " + timeLeft;
         if (secondsLeft === 0);
         clearInterval(timerInterval);
-        sendMessage();
+        endGame();
     
     }
     )
-} 1000;
- const question =document.createElement(questions)
+} 1000; 
+console.log(startTimer.value)
+const question =document.createElement(questions)
   var questions = [
     {
     question1: 'String statments are enclosed within __________ marks',
@@ -85,8 +83,12 @@ question4:'An alert is ment to______?',
     }
 
   ]
+  
+//   document.body.questionEl.append(questions)
 
-
+function endgame(){
+        start.textContent.Content = "game over";
+}
         
         
 

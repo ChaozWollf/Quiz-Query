@@ -16,16 +16,16 @@ h1 {
     margin: 0 auto;
 }
 
-.questions {
+.questionsEl {
     display: inline-flex;
     position: absolute;
-    left:47%;
+    left:45%;
     top:15%;
     font-size: xx-large;
-    margin: 0 auto;
+    
 
 }
-.startEl {
+.startEle {
     display: inline-flex;
         position: absolute;
         left: 49%;

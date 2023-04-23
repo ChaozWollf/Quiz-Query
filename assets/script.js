@@ -20,23 +20,23 @@
 // working start button
 //timer-intervals
 //working buttons for answers
-const start = document.querySelector(".timer");
-const tim = document.querySelector("#timerHT")
-const quest = document.querySelector(".questions")
-// let timersrt = 120;
+start = document.querySelector(".startEle");
+tim = document.querySelector(".timer")
+quest = document.querySelector(".questions")
+
+let timersrt = 60;
 start.addEventListener("click", function () {quizTimer() 
-    let timersrt = 120;
     const timeInterval = setInterval(function () {
         timersrt--;
-        start.textContent = timersrt + "seconds left.";
+        tim.textContent =  "Timer: " + timersrt;
 
-        if (timeLeft === 0) {
+        if (timesrt == 0) {
             clearInterval(timeInterval);
             displayMessage();
         }
 
-    }, 1000);},
-    console.log(start));
+    }, 250);},
+    console.log(timersrt.value));
 
 //     var questions = [
 //         {
@@ -82,8 +82,8 @@ start.addEventListener("click", function () {quizTimer()
 
 // return
 
-// function displayMessage {
-//  const endgame = ("game over")
+function displayMessage {
+ console.log("small victory")
 
 // }
 // render.endgame
