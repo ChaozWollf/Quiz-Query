@@ -1,7 +1,5 @@
 
 
-
-
 // GIVEN I am taking a code quiz
 // WHEN I click the start button
 // THEN a timer starts and I am presented with a question
@@ -13,12 +11,9 @@
 // THEN the game is over
 // WHEN the game is over
 // THEN I can save my initials and my score
+
 //compare question to answer array
 
-
-
-//variable for the questions
-//variable for the answers
 //function for the questions
 //function for the event listener
 //function for timer intervals
@@ -27,15 +22,12 @@
 //working buttons for answers
 const start = document.querySelector(".timer");
 const tim = document.querySelector("#timerHT")
-const quest=document.querySelector(".questions")
-let timersrt = 120;
-start.addEventListener("click", quizTimer)
-
-
-function quizTimer() {
-
+const quest = document.querySelector(".questions")
+// let timersrt = 120;
+start.addEventListener("click", function () {quizTimer() 
+    let timersrt = 120;
     const timeInterval = setInterval(function () {
-        timesrt--;
+        timersrt--;
         start.textContent = timersrt + "seconds left.";
 
         if (timeLeft === 0) {
@@ -43,45 +35,60 @@ function quizTimer() {
             displayMessage();
         }
 
-    }, 1000);
-}
-function questions() {
+    }, 1000);},
+    console.log(start));
 
-    const questionso = {
-
-
-        question1: "A theory for population decline in the western countries(that needs more research) is? ",
-        answers: ["A decrease in male sperm", "Feminist rights", "Ugly males", "Smoking", "Trump."],
-        Correct: answers[1],
-    }
-
-    const questiont = {
-        question2: "How much did a MTG Black Lotus in mint condition sell for on March 16th 2023?",
-        choice: ["$540,000", "1,200,000", "$50", "$1", "$120"],
-        Correct: choices[1],
-    }
+//     var questions = [
+//         {
 
 
-    const questionr = {
-        question3: "What is the fungus in the show 'The Last of Us' based on?",
-        retort: ["Ohiocordyceps unilateralis", "dermatophytes", "Penicillium chrysogenum", "Botrytis cinerea", "Stachybotrys chartarum"],
-        Correct: retort[1]
-    }
+//             question: "My name is ____ ",
+//             choices: ["Brandon", "John", "TweedleDumb", "TweedleDee", "Trump."],
+//             answer: "Brandon",
+//         },
+//         {
+//             question: "My cats name is ____",
+//             choices: ["Spoiled", "Nimbus", "Spot", "Luna", "Chickie-poodle"],
+//             answer: "Luna",
+//         },
+//         {
+//             question: "I live in ______",
+//             choices: ["Washingtion DC", "South Dakota", "state of denial", "Virginia", "Minnesota"],
+//             Answer: "SouthDakota"
+//         },
+//         {
+//             question: "How many dogs do I have?",
+//             choices: ["0", "1", "2", "3", "to many"],
+//             answer: "0",
 
-document.body.div.appendChi
 
-}
+//             question: "Where holds the Guinness books world  record for fastest recorded temperature change?",
+//             choices: ["Death Vally", "Siberia", "Antartica", "South Dakota", "Alaska"],
+//             Answer: "South Dakota",
 
+//         }]
+
+//     for (i = 0; i < questions.length[question]; i++)[
+    
+//         document.body.children[4].append[questions[i].question]
+//     ]
+
+
+
+    
+
+    
+//         document.body.div.
+
+// return
 
 // function displayMessage {
 //  const endgame = ("game over")
- 
+
 // }
 // render.endgame
 
-for (let i = 0; i < questions.length; i++);
-
-
+// for (let i = 0; i < questions.length; i++);
 
 
 

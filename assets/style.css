@@ -1,0 +1,35 @@
+.body {
+    display: flex;
+    background-color: aqua;
+
+}
+
+.timer {
+    display: inline-flex;
+    position: absolute;
+    right: 5%;
+
+}
+
+h1 {
+    display: inline-flex;
+    margin: 0 auto;
+}
+
+.questions {
+    display: inline-flex;
+    position: absolute;
+    left:47%;
+    top:15%;
+    font-size: xx-large;
+    margin: 0 auto;
+
+}
+.start {
+    display: inline-flex;
+        position: absolute;
+        left: 49%;
+        top: 25%;
+        font-size: x-large;
+        margin: 0 auto;
+}
