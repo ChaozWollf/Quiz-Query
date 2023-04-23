@@ -26,15 +26,15 @@ let preGame = " "
 let mode=preGame
 
 
-timeleft=120    
+timeleft=120        
 
 button.addEventListener(
     "click",
     function () { startQuiz });
 
 
-    function startQuiz() { startTimer }
-return;
+    function startQuiz() { startTimer 
+return; }
 
 function startTimer() {
     let startEl = document.querySelector(".timer")
@@ -44,14 +44,15 @@ function startTimer() {
         if (secondsLeft === 0);
         clearInterval(timerInterval);
         sendMessage();
+    
     }
     )
 } 1000;
  const question =document.createElement(questions)
   var questions = [
     {
-    question1: 'String statments are enclosed within __________ marks"
-    choices:['quotation', 'paragraph', 'track', 'bite', 'none of the above']
+    question1: 'String statments are enclosed within __________ marks',
+    choices:['quotation', 'paragraph', 'track', 'bite', 'none of the above'],
     answer: 'quotation'
     },
     {
@@ -62,7 +63,22 @@ function startTimer() {
 {
 
         question3:'An append statment adds to an element on the _________',
-        choices: ['top of the listed element(ex.by reading from top to bottom "appended element then listed element"', 'bottom of the listed element', 'restraining order list', ]
+        choices: ['top of the listed element(ex.by reading from top to bottom "appended element then listed element"', 'bottom of the listed element', 'restraining order list', ],
+        answer: 'bottom of the listed element'
+},
+{
+        
+question4:'An alert is ment to______?',
+        choices: ['inform the enduser of possible problems', 'ask the enduser for input','annoy the enduser', 'add a element to the page', 'cause a massive surge in power so that the enduser can no longer operate their computer', ],
+        answer:'inform the enduser of possible problems',
+},
+{
+
+        question5:'A console.log() is will______',
+        choices:['log the thing in the parenths in the console', 'make an array', 'make a function', 'log your personal gaming console at home','take over the world',],
+        answer:'log the thing in the parenths in the console'
+
+
 
  
  
