@@ -25,70 +25,81 @@ tim = document.querySelector(".timer")
 quest = document.querySelector(".questions")
 
 let timersrt = 60;
-start.addEventListener("click", function () {quizTimer() 
+start.addEventListener("click", torrent())
+
+
+
+
+
+
+
+
+
+
+function torrent() {
     const timeInterval = setInterval(function () {
         timersrt--;
-        tim.textContent =  "Timer: " + timersrt;
+        tim.textContent = "Timer: " + timersrt;
 
         if (timesrt == 0) {
             clearInterval(timeInterval);
             displayMessage();
         }
 
-    }, 250);},
-    console.log(timersrt.value));
-
-//     var questions = [
-//         {
-
-
-//             question: "My name is ____ ",
-//             choices: ["Brandon", "John", "TweedleDumb", "TweedleDee", "Trump."],
-//             answer: "Brandon",
-//         },
-//         {
-//             question: "My cats name is ____",
-//             choices: ["Spoiled", "Nimbus", "Spot", "Luna", "Chickie-poodle"],
-//             answer: "Luna",
-//         },
-//         {
-//             question: "I live in ______",
-//             choices: ["Washingtion DC", "South Dakota", "state of denial", "Virginia", "Minnesota"],
-//             Answer: "SouthDakota"
-//         },
-//         {
-//             question: "How many dogs do I have?",
-//             choices: ["0", "1", "2", "3", "to many"],
-//             answer: "0",
-
-
-//             question: "Where holds the Guinness books world  record for fastest recorded temperature change?",
-//             choices: ["Death Vally", "Siberia", "Antartica", "South Dakota", "Alaska"],
-//             Answer: "South Dakota",
-
-//         }]
-
-//     for (i = 0; i < questions.length[question]; i++)[
-    
-//         document.body.children[4].append[questions[i].question]
-//     ]
+    },},   250
+        ,
+        
 
 
 
-    
+var questions = [
+    {
+        question: "My name is ____ ",
+        choices: ["Brandon", "John", "TweedleDumb", "TweedleDee", "Trump."],
+        answer: "Brandon",
 
-    
-//         document.body.div.
+    },
+    {
+        question: "My cats name is ____",
+        choices: ["Spoiled", "Nimbus", "Spot", "Luna", "Chickie-poodle"],
+        answer: "Luna",
+    },
+    {
+        question: "I live in ______",
+        choices: ["Washingtion DC", "South Dakota", "state of denial", "Virginia", "Minnesota"],
+        Answer: "SouthDakota"
+    },
+    {
+        question: "How many dogs do I have?",
+        choices: ["0", "1", "2", "3", "to many"],
+        answer: "0",
+    },
+    {
+        question: "Where holds the Guinness books world  record for fastest recorded temperature change?",
+        choices: ["Death Vally", "Siberia", "Antartica", "South Dakota", "Alaska"],
+        Answer: "South Dakota",
+    },
 
-// return
+
+
+
+
+]
+for (i = 0; i < questions.length; i++)
+
+    document.body.children[3].appendChild(questions.question)
+
+
+
+
+
+
 
 function displayMessage {
- console.log("small victory")
+    console.log("small victory")
+}
 
-// }
-// render.endgame
 
-// for (let i = 0; i < questions.length; i++);
 
 
 
