@@ -73,9 +73,16 @@ function startTimer() {
     }
   }, 1000);
 }
+function hideStart() {
+  startButton
+
+  
+}
+
 
 function endGame() {
-  const hss = prompt("initials please");}
-
+  const hss = prompt("initials please");
+}
  startBtn.addEventListener('click', startQuiz);
   startBtn.addEventListener('click', startTimer);
+startBtn.addEventListener('click', hideStart);
