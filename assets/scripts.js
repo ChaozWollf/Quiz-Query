@@ -18,7 +18,7 @@
 //if else statment for wrong answers to take off time
 //end game variable when the timer reaches 0
 //object pushed to local storage with initials tied to highscore
-
+const startBtn = document.querySelector('.startEle')
 const timer = document.body.querySelector(".timer");
 const hs = document.querySelector(".HS");
 const button = document.querySelector(".startEle");
@@ -75,4 +75,6 @@ function startTimer() {
 }
 
 function endGame() {
-  const hss = prompt("initials please
+  const hss = prompt("initials please");}
+
+ startBtn.addEventListener('click', startQuiz);
