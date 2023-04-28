@@ -19,17 +19,24 @@ h1 {
 .questionsEl {
     display: inline-flex;
     position: absolute;
-    left:45%;
-    top:15%;
+    left: 45%;
+    top: 15%;
     font-size: xx-large;
-    
+
 
 }
+
 .startEle {
     display: inline-flex;
-        position: absolute;
-        left: 49%;
-        top: 25%;
-        font-size: x-large;
-        margin: 0 auto;
+    position: absolute;
+    left: 49%;
+    top: 25%;
+    font-size: x-large;
+    margin: 0 auto;
+}
+
+.question-container {
+    right: 49%;
+    top: 25%;
+
 }

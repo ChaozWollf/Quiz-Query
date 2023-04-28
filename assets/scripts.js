@@ -19,78 +19,60 @@
 //end game variable when the timer reaches 0
 //object pushed to local storage with initials tied to highscore
 
-timer = document.querySelector(".timer")
-hs = document.getElementsByClassName("HS"), button = document.querySelector(".startEle")
-let preGame = " "
-let mode=preGame
+const timer = document.body.querySelector(".timer");
+const hs = document.querySelector(".HS");
+const button = document.querySelector(".startEle");
+const questionsEl = document.querySelector(".questionsEl");
+let preGame = "";
+let mode = preGame;
 
+const questions = [
+  {
+    questions: 'String statments are enclosed within __________ marks',
+    choices: ['quotation', 'paragraph', 'track', 'bite', 'none of the above'],
+    answer: 'quotation'
+  },
+  {
+    questions: 'The previous question was a little _________',
+    choices: ['dark', 'twisted', 'inaproperiate', 'made out of frustration', 'all of the above'],
+    answer: 'all of the above'
+  },
+  {
+    questions: 'An append statment adds to an element on the _________',
+    choices: ['top of the listed element(ex.by reading from top to bottom "appended element then listed element"', 'bottom of the listed element', 'restraining order list'],
+    answer: 'bottom of the listed element'
+  },
+  {
+    questions: 'An alert is ment to______?',
+    choices: ['inform the enduser of possible problems', 'ask the enduser for input', 'annoy the enduser', 'add a element to the page', 'cause a massive surge in power so that the enduser can no longer operate their computer'],
+    answer: 'inform the enduser of possible problems'
+  },
+  {
+    questions: 'A console.log() is will______',
+    choices: ['log the thing in the parenths in the console', 'make an array', 'make a function', 'log your personal gaming console at home', 'take over the world'],
+    answer: 'log the thing in the parenths in the console'
+  }
+];
 
-let timeleft=120        
-
-button.addEventListener("click",
-    function () { startQuiz });
-
-
-    function startQuiz() { startTimer
-return; }
+function startQuiz() {
+  questions.forEach(function (questionObj) {
+    const questionEl = document.createElement("div");
+    questionEl.textContent = questionObj.questions;
+    questionsEl.appendChild(questionEl);
+  });
+}
 
 function startTimer() {
-const  timerInterval = setInterval(function () {
-        timeLeft--;
-        timer.textContent = "Timer; " + timeLeft;
-        if (secondsLeft === 0);
-        clearInterval(timerInterval);
-        endGame();
-    
+  let timeLeft = 60;
+  const timerInterval = setInterval(function () {
+    timer.textContent = "Timer: " + timeLeft;
+    timeLeft--;
+    if (timeLeft == 0) {
+      clearInterval(timerInterval);
+      endGame();
     }
-    )
-} 1000; 
-console.log(startTimer.value)
-const question =document.createElement(questions)
-  var questions = [
-    {
-    question1: 'String statments are enclosed within __________ marks',
-    choices:['quotation', 'paragraph', 'track', 'bite', 'none of the above'],
-    answer: 'quotation'
-    },
-    {
-        question2:'The previous question was a little _________',
-        choices: ['dark', 'twisted','inaproperiate', 'made out of frustration', 'all of the above'],
-        answer: 'all of the above'
-    },
-{
-
-        question3:'An append statment adds to an element on the _________',
-        choices: ['top of the listed element(ex.by reading from top to bottom "appended element then listed element"', 'bottom of the listed element', 'restraining order list', ],
-        answer: 'bottom of the listed element'
-},
-{
-        
-question4:'An alert is ment to______?',
-        choices: ['inform the enduser of possible problems', 'ask the enduser for input','annoy the enduser', 'add a element to the page', 'cause a massive surge in power so that the enduser can no longer operate their computer', ],
-        answer:'inform the enduser of possible problems',
-},
-{
-
-        question5:'A console.log() is will______',
-        choices:['log the thing in the parenths in the console', 'make an array', 'make a function', 'log your personal gaming console at home','take over the world',],
-        answer:'log the thing in the parenths in the console'
-
-
-
- 
- 
-    }
-
-  ]
-  
-//   document.body.questionEl.append(questions)
-
-function endgame(){
-        start.textContent.Content = "game over";
+  }, 1000);
 }
-        
-        
 
-    
-
+function endGame() {
+  const hss = prompt("initials please
