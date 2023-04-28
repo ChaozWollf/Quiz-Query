@@ -78,3 +78,4 @@ function endGame() {
   const hss = prompt("initials please");}
 
  startBtn.addEventListener('click', startQuiz);
+  startBtn.addEventListener('click', startTimer);
