@@ -79,7 +79,7 @@ function showQuestion() {
         console.log("Correct!!")
       } else {
         console.log("Incorrect")
-        timeLeft - 10;
+        timeLeft = timeLeft - 10;
       }
 
       currentQuestionIndex++;
@@ -100,7 +100,7 @@ function showQuestion() {
 
 
 function startTimer() {
-  let timeLeft = 60;
+   timeLeft = 60;
    timerInterval = setInterval(function () {
     timer.textContent = "Timer: " + timeLeft;
     timeLeft--;
@@ -117,8 +117,8 @@ function hideStart() {
 }
 
 function renderEnder() {
-  const initials = JSON.parse(localStorage.getItem("score"));
-  hs.textContent = "High Scores: " + initials;
+  const initials = JSON.parse(localStorage.getItem("hss"));
+  hs.textContentContent= "High Scores: " + initials[0].initials;
   
   
 };
