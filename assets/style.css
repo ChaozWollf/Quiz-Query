@@ -13,13 +13,14 @@
 
 h1 {
     display: inline-flex;
-    margin: 0 auto;
+    margin: 0 auto
+    
 }
 
 .questionsEl {
     display: inline-flex;
     position: absolute;
-    left: 45%;
+    left: 12%;
     top: 15%;
     font-size: xx-large;
 
