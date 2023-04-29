@@ -18,7 +18,8 @@
 //if else statment for wrong answers to take off time
 //end game variable when the timer reaches 0
 //object pushed to local storage with initials tied to highscore
-
+let timerInterval;
+let timeLeft = 60;
 let hss = [];
 const startBtn = document.querySelector('.startEle')
 const timer = document.body.querySelector(".timer");
@@ -78,7 +79,7 @@ function showQuestion() {
         console.log("Correct!!")
       } else {
         console.log("Incorrect")
-        timeLeft -= 10
+        timeLeft - 10;
       }
 
       currentQuestionIndex++;
@@ -100,7 +101,7 @@ function showQuestion() {
 
 function startTimer() {
   let timeLeft = 60;
-  const timerInterval = setInterval(function () {
+   timerInterval = setInterval(function () {
     timer.textContent = "Timer: " + timeLeft;
     timeLeft--;
     if (timeLeft == -1) {
@@ -116,21 +117,24 @@ function hideStart() {
 }
 
 function renderEnder() {
-  const initials = JSON.parse(localStorage.getItem("hss"));
-  return initials;
-}
+  const initials = JSON.parse(localStorage.getItem("score"));
+  hs.textContent = "High Scores: " + initials;
+  
+  
+};
+
+
 
 
 function endGame(timeLeft) {
+ clearInterval(timerInterval);
   const initials = prompt("initials please");
-  const score = { initials: initials, timeLeft: timeLeft };
+  const score = { initials: initials, timeLeft: timeLeft.value };
   hss.push(score);
   localStorage.setItem("hss", JSON.stringify(hss));
   renderEnder();
 
 }
-
-
 startBtn.addEventListener('click', startQuiz);
 startBtn.addEventListener('click', startTimer);
 startBtn.addEventListener('click', hideStart);
