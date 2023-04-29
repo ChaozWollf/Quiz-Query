@@ -13,4 +13,4 @@ This code is used to test my talents and note that the score is pulled out of lo
 N/A
 
 
-![Alt: a picture of my Quiz-Query](assets/image/Screenshot%202023-04-28%20223247.png)
+![Alt: a picture of my Quiz-Query](assets/image/Screenshot%202023-04-28%20223932.png)
