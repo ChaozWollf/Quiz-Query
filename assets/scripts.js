@@ -118,7 +118,7 @@ function hideStart() {
 
 function renderEnder() {
   const initials = JSON.parse(localStorage.getItem("hss"));
-  hs.textContentContent= "High Scores: " + initials[0].initials;
+  hs.textContent= "High Scores: " + initials[0].initials + " " + timeLeft; 
   
   
 };
